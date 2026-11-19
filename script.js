@@ -1,19 +1,19 @@
 // EDIT THE DETAILS IN THIS SECTION
 const wedding = {
-  names: "Vishnu & Navya",
-  date: "2026-12-13T10:00:00", // Local time: YYYY-MM-DDTHH:MM:SS
-  displayDate: "Sunday, 13 December 2026",
-  eventTime: "Please add the wedding time",
-  venueName: "Add your wedding venue",
-  venueAddress: "Add the complete venue address, Kerala",
-  mapUrl: "https://maps.google.com/?q=Kannur,Kerala",
-  shareMessage: "We warmly invite you to celebrate the wedding of Vishnu & Navya on Sunday, 13 December 2026. We look forward to seeing you!"
+  names: "Basil & Amrutha",
+  date: "2027-01-09T11:00:00", // Local time: YYYY-MM-DDTHH:MM:SS
+  displayDate: "Saturday, 09 January 2027",
+  eventTime: "BTW 11:00 AM to 12:00 NOON",
+  venueName: "PAYYAVOOR SHIVA KSHETHRAM",
+  venueAddress: "PAYYAVOOR SHIVA KSHETHRAM KANNUR",
+  mapUrl: "https://share.google/Q8tULhcZuwmTbRyOu",
+  shareMessage: "We warmly invite you to celebrate the wedding of Basil & Amrutha on Saturday, 09 January 2027. We look forward to seeing you!"
 };
 
 const $ = (id) => document.getElementById(id);
 
 ["introNames","heroNames","welcomeNames","closingNames","footerNames"].forEach(id => $(id).textContent = wedding.names);
-$("introDate").textContent = wedding.displayDate.replace("Sunday, ","").replaceAll(" "," · ");
+$("introDate").textContent = wedding.displayDate.replace(/^[^,]+,\s*/, "").replaceAll(" "," · ");
 $("heroDate").textContent = wedding.displayDate;
 $("eventDate").textContent = wedding.displayDate;
 $("eventTime").textContent = wedding.eventTime;
@@ -58,6 +58,17 @@ function updateCountdown() {
     hours: Math.floor((diff % 86400000) / 3600000),
     minutes: Math.floor((diff % 3600000) / 60000),
     seconds: Math.floor((diff % 60000) / 1000)
+  };
+  Object.entries(units).forEach(([id,value]) => $(id).textContent = String(value).padStart(2,"0"));
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+$("shareButton").addEventListener("click", () => {
+  const url = window.location.href;
+  const message = `${wedding.shareMessage}\n\n${url}`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+});
   };
   Object.entries(units).forEach(([id,value]) => $(id).textContent = String(value).padStart(2,"0"));
 }
