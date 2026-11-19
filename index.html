@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f1e6">
+  <meta name="description" content="A wedding invitation celebrating a beautiful beginning.">
+  <title>Vishnu &amp; Navya | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Noto+Serif+Malayalam:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="intro" id="intro">
+    <div class="intro-ornament">❧</div>
+    <p class="eyebrow">A NEW CHAPTER BEGINS</p>
+    <h1 id="introNames">Vishnu <span>&amp;</span> Navya</h1>
+    <p class="intro-date" id="introDate">13 · 12 · 2026</p>
+    <button class="gold-button" id="openInvitation">Open Invitation</button>
+    <p class="tiny-note">With love, we invite you to celebrate</p>
+  </div>
+
+  <audio id="weddingMusic" loop preload="none">
+    <source src="assets/audio/wedding-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <main id="invitation" class="site hidden">
+    <header class="hero">
+      <div class="hero-shade"></div>
+      <nav class="top-nav">
+        <a href="#home" class="brand">The Wedding</a>
+        <button class="music-button" id="musicToggle" aria-label="Play or pause music">♫ <span>Play music</span></button>
+      </nav>
+      <div class="hero-content" id="home">
+        <p class="eyebrow light">A CELEBRATION OF LOVE</p>
+        <h1 id="heroNames">Vishnu <span>&amp;</span> Navya</h1>
+        <div class="gold-line"></div>
+        <p class="hero-date" id="heroDate">Sunday, 13 December 2026</p>
+        <p class="hero-caption">Two hearts. One beautiful journey.</p>
+        <a class="scroll-link" href="#welcome">Discover the invitation ↓</a>
+      </div>
+    </header>
+
+    <section class="welcome section" id="welcome">
+      <p class="eyebrow">WITH THE BLESSINGS OF OUR FAMILIES</p>
+      <div class="lotus">✺</div>
+      <h2>Sharing Happiness</h2>
+      <p class="lead">Together with our families, we invite you to be part of our special day as we begin a lifetime of love, laughter and togetherness.</p>
+      <p class="signature" id="welcomeNames">Vishnu &amp; Navya</p>
+    </section>
+
+    <section class="countdown-section section">
+      <p class="eyebrow light">THE BIG DAY IS APPROACHING</p>
+      <h2>Counting the moments</h2>
+      <div class="countdown" aria-live="polite">
+        <div><strong id="days">00</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+      <p id="countdownMessage" class="countdown-message"></p>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <p class="eyebrow">A FEW MOMENTS TO CHERISH</p>
+      <h2>Our Moments</h2>
+      <p class="section-intro">A little collection of memories from our journey.</p>
+      <div class="gallery">
+        <figure class="gallery-large"><img src="assets/images/couple-1.jpg" alt="Couple photograph one"><figcaption>Forever starts here</figcaption></figure>
+        <figure><img src="assets/images/couple-2.jpg" alt="Couple photograph two"></figure>
+        <figure><img src="assets/images/couple-3.jpg" alt="Couple photograph three"></figure>
+      </div>
+      <p class="photo-hint">Replace the sample image files in <b>assets/images</b> with your own photographs.</p>
+    </section>
+
+    <section class="event-section section" id="details">
+      <p class="eyebrow">SAVE THE DATE</p>
+      <h2>The Wedding</h2>
+      <div class="event-card">
+        <div class="event-symbol">❀</div>
+        <p class="event-label">WEDDING CEREMONY</p>
+        <h3 id="eventDate">Sunday, 13 December 2026</h3>
+        <p id="eventTime">Please add the wedding time</p>
+        <p class="venue-name" id="venueName">Add your wedding venue</p>
+        <p class="venue-address" id="venueAddress">Add the complete venue address, Kerala</p>
+        <a class="outline-button" id="mapLink" href="https://maps.google.com/" target="_blank" rel="noopener">View on Google Maps ↗</a>
+      </div>
+    </section>
+
+    <section class="closing section">
+      <div class="lotus">❧</div>
+      <p class="eyebrow">YOUR PRESENCE IS OUR PRESENT</p>
+      <h2>We can't wait to celebrate with you!</h2>
+      <p>With love and warm regards,</p>
+      <p class="signature" id="closingNames">Vishnu &amp; Navya</p>
+      <button class="gold-button" id="shareButton">Share on WhatsApp</button>
+    </section>
+
+    <footer>
+      <p id="footerNames">Vishnu &amp; Navya</p>
+      <span>MADE WITH LOVE</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
